@@ -1,7 +1,7 @@
 import streamlit
 import pandas
 import requests
-import snowflake.connector
+#import snowflake.connector
 from urllib.error import URLError
 
 streamlit.title("My Mom's New Healthy Dinner")
@@ -53,6 +53,7 @@ streamlit.header("The fruit load list contains:")
 
 #add a button to load the list
 #if streamlit.button('Get Fruit Load List'):
+import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursur()
 streamlit.header("Test")
